@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/5509/5509636.png" />
+    <title>LOGIN</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        #signUpForm {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="loginContainer">
+        <button class="btn color mr-2" onclick="showLoginForm()">LOGIN</button>
+        <button class="btn btn-secondary" onclick="showSignUpForm()">SIGN UP</button>
+    <!-- Giriş Formu -->
+    <form id="loginForm">
+        <div class="form-group">
+            <label for="email" class="sol"><i class="fas fa-envelope"></i> Email:</label>
+            <input type="email" class="form-control" id="email" required oninput="validateEmail()">
+            <small id="emailError" class="form-text text-muted error-message"></small>
+        </div>
+        <div class="form-group">
+            <label for="password" class="sol"><i class="fas fa-lock"></i> Password:</label>
+            <input type="password" class="form-control" id="password" required>
+            <small id="passwordHelp" class="form-text text-muted">
+                Password must be at least 8 characters.
+            </small>
+        </div>
+        <button type="button" class="btn color" onclick="login()">LOGIN</button>
+        <div id="errorMessage" class="error-message"></div>
+    </form>
+
+    <!-- Kayıt Formu -->
+    <form id="signUpForm" style="display: none;">
+        <div class="form-group">
+            <label for="signupEmail" class="sol"><i class="fas fa-envelope"></i> Email:</label>
+            <input type="email" class="form-control" id="signupEmail" required oninput="validateSignUpEmail()">
+            <small id="signupEmailError" class="form-text text-muted error-message"></small>
+        </div>
+        <div class="form-group">
+            <label for="signupPassword" class="sol"><i class="fas fa-lock"></i> Password:</label>
+            <input type="password" class="form-control" id="signupPassword" required oninput="validateSignUpPassword()">
+            <small id="signupPasswordHelp" class="form-text text-muted">
+                Password must be at least 8 characters.
+            </small>
+        </div>
+        <div class="form-group">
+            <label for="birthDate" class="sol"><i class="fas fa-calendar"></i> Birth Date:</label>
+            <input type="date" class="form-control" id="birthDate" required>
+        </div>
+        <button type="button" class="btn color" onclick="signUp()">SIGN UP</button>
+        <div id="signupErrorMessage" class="error-message"></div>
+    </form>
+
+    <div class="custom-control custom-switch dark-mode-toggle">
+        <input type="checkbox" class="custom-control-input" id="darkModeToggle" onchange="toggleDarkMode()">
+        <label class="custom-control-label" for="darkModeToggle" >DARK MODE</label>
+    </div>
+</div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

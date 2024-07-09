@@ -1,0 +1,148 @@
+body,
+.container,
+.error-message {
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #7f0441, #a10654);
+  transition: background-color 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  color: #b72121;
+}
+
+#loginContainer {
+  max-width: 600px;
+  border-radius: 5px;
+  padding: 25px;
+  background: linear-gradient(45deg, #750347 50%, #ffffff 50%);
+  background-size: 200% 200%;
+  animation: gradientTransition 5s infinite;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  animation: fadeInSlow 1s ease-in-out;
+  text-align: center; /* Form içeriğini ortalamak için */
+}
+
+#loginForm,
+#signUpForm {
+  margin-top: 20px; /* Formları birbirinden ayırmak için */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+button {
+  width: auto; /* Genişlik otomatik ayarlandı */
+  margin-top: 10px; /* Butonları birbirinden ayırmak için */
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+button.color {
+  background-color: rgb(178, 14, 96);
+  color: rgb(255, 255, 255); /* Beyaz metin rengi */
+}
+
+button:hover {
+  transform: scale(1.1); /* Üzerine gelindiğinde büyüme animasyonu */
+}
+
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  transition: transform 0.3s; /* Odaklandığında büyüme animasyonu */
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus {
+  transform: scale(1.1); /* Odaklandığında büyüme animasyonu */
+}
+
+@keyframes gradientTransition {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@keyframes fadeInSlow {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body.dark-mode {
+  background: linear-gradient(to right, #000000, #0f1010, #000000);
+  color: #ffffff;
+}
+
+.container.dark-mode {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.error-message {
+  color: #ff6347;
+  margin-top: 10px;
+}
+#loginContainer.dark-mode {
+  max-width: 600px;
+  border-radius: 5px;
+  padding: 25px;
+  background: linear-gradient(45deg, #bcbbbb 50%, #ffffff 50%);
+  background-size: 200% 200%;
+  animation: gradientTransition 5s infinite;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  animation: fadeInSlow 1s ease-in-out;
+  text-align: center; /* Form içeriğini ortalamak için */
+}
+
+#loginForm label.sol {
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+  color: #ffffff;
+  letter-spacing: 3px;
+}
+
+#signUpForm label.sol {
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+  color: #ffffff;
+  letter-spacing: 3px;
+}
+
+body.dark-mode #signUpForm label {
+  color: black;
+}
+
+body.dark-mode #loginForm label {
+  color: black;
+}
+.dark-mode-toggle {
+  color: #750347;
+  padding: 5px;
+  letter-spacing: 3px;
+  background: linear-gradient(to right, #eeeeee, #dddddd);
+  border-radius: 5px;
+  display: inline-block;
+  font-weight: bold;
+}
