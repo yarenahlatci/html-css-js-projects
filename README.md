@@ -13,7 +13,7 @@ Bu repoda HTML, CSS ve JavaScript kullanılarak yapılmış çeşitli web projel
 
 ### Proje Çıktıları
 
-Bu projenin çıktılarına `projelerin-ciktilari` klasöründen erişebilirsiniz. Klasör içinde proje görselleri ve diğer çıktılar bulunmaktadır.
+Bu projenin çıktılarına `PROJELERIN-CIKTILARI` klasöründen erişebilirsiniz. Klasör içinde proje görselleri ve diğer çıktılar bulunmaktadır.
 
 ## NASIL KULLANILIR?
 
